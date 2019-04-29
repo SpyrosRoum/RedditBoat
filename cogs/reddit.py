@@ -150,8 +150,8 @@ class Reddit(commands.Cog):
             return
         if message.embeds:
             try:
-                #if payload.user_id == int(message.embeds[0].title.split("(")[1].replace(")","")):
-                #    return
+                if payload.user_id == int(message.embeds[0].title.split("(")[1].replace(")","")):
+                    return
                 post_votes = int(message.embeds[0].footer.text.split(": ")[1])
                 reaction = str(payload.emoji).split(":")[2].replace(">","")
                 post_author = self.bot.get_user(int(message.embeds[0].title.split("(")[1].replace(")","").split(",")[0]))
@@ -175,8 +175,8 @@ class Reddit(commands.Cog):
             return
         if message.embeds:
             try:
-                #if payload.user_id == int(message.embeds[0].title.split("(")[1].replace(")","")):
-                #    return
+                if payload.user_id == int(message.embeds[0].title.split("(")[1].replace(")","")):
+                    return
                 post_votes = int(message.embeds[0].footer.text.split(": ")[1])
                 reaction = str(payload.emoji).split(":")[2].replace(">","")
                 post_author = self.bot.get_user(int(message.embeds[0].title.split("(")[1].replace(")","").split(",")[0]))
